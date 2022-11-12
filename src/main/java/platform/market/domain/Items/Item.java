@@ -26,12 +26,4 @@ public abstract class Item extends BaseEntity {
 
     @OneToMany(mappedBy = "item")
     private List<CategoryItem> categoryItems=new ArrayList<>();
-
-
-//    @ManyToMany
-//    @JoinTable(name = "ITEM_CATEGORY"
-//            ,joinColumns = @JoinColumn(name="ITEM_ID")
-//            ,inverseJoinColumns = @JoinColumn(name = "CATEGORY_ID"))
-//    @ManyToMany(mappedBy = "items")
-//    private List<Category> categories=new ArrayList<>();
 }
