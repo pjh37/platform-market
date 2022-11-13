@@ -1,5 +1,6 @@
 package platform.market.domain.order;
 
+import lombok.Builder;
 import platform.market.domain.BaseEntity;
 import platform.market.domain.member.Member;
 import platform.market.domain.delivery.Delivery;
@@ -32,4 +33,11 @@ public class Order extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
+    @Builder
+    public Order(Long id, Delivery delivery, OrderStatus status) {
+        this.id = id;
+        this.delivery = delivery;
+        this.status = status;
+    }
 }
