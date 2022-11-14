@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class KafkaProducer {
-    private final KafkaTemplate<String, OrderDTO> kafkaTemplate;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     public void send(){
         OrderDTO orderDTO= OrderDTO.builder()

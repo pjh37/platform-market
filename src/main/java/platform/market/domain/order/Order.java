@@ -1,6 +1,7 @@
 package platform.market.domain.order;
 
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 import platform.market.domain.BaseEntity;
 import platform.market.domain.member.Member;
 import platform.market.domain.delivery.Delivery;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name="ORDERS")
+@NoArgsConstructor
 public class Order extends BaseEntity {
     @Id
     @GeneratedValue
